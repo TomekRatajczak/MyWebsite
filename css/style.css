@@ -1,0 +1,322 @@
+/* Global */
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding-bottom: 50px;
+}
+.header{
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.header-style{
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.header-base{
+    font-size: 2rem;
+    margin: 10px 0 0 0;
+}
+
+/* Navigation */
+.nav-bar-container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 1fr 100px 100px;
+    justify-items: center;
+    color: #fff;
+}
+.nav-menu{
+    z-index: 3;
+}
+.nav-menu-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px  #000;
+}
+
+/* Hero */
+.nav-hero{
+    display: grid;
+    justify-items: center;
+    height: 80vh;
+    Width: 100%;
+    background-color: gray;
+    z-index: 1;
+    position: relative;
+    top: -100px;
+}
+.nav-hero-img{
+    height: 80vh;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    object-fit: cover;
+    opacity: 0.6;   
+}
+.nav-hero-text{
+    z-index: 3;
+    position: relative;
+    top: -450px;
+    text-shadow: 2px 2px  #000;
+    text-align: center;
+}
+.nav-hero-text-big{
+    font-size: 4rem;
+}
+.nav-hero-text-small{
+    color: green;
+}
+
+/* Person */
+.nav-person{
+    z-index: 3;
+    position: relative;
+    top: -220px;
+}
+.nav-person-img{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 105px;
+}
+
+/* About */
+.about-paragraph-header{
+    text-align: center;
+    margin-top: 0;
+    color: green;
+}
+.about-paragraph{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 50px;
+    margin: 0 50px;
+}
+.about-content-single-box{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.about-content-single-box-icon{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.about-content-single-paragraph{
+    text-align: justify;
+}
+
+/* Skills */
+.skills-container{
+    background-color: gray;
+}
+.skills-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+.skills-content-single{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 5px 0;
+}
+.skills-content-single-icon{
+    display: inline-block;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+.skills-content-single-scale{
+    display: inline-block;
+}
+
+/* Portfolio */
+.portfolio-single-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: self-start
+    ;
+    grid-gap: 50px;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.portfolio-single-image{
+    width: 100%;
+    height: 50vh;
+    background-color: blue;
+    margin: 20px 0;
+}
+.portfolio-single-content-paragraph{
+    text-align: justify;
+}
+.portfolio-single-buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.portfolio-single-buttons-double{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    grid-gap: 10px;
+}
+.portfolio-single-button{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: chartreuse;
+    border: 0;
+}
+.portfolio-single-button-icon{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+
+/* Opinion */
+.opinion-container{
+    background-color: gray;
+}
+.opinion-carousel-container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+.opinion-carousel-single{
+    width: 80%;
+    
+}
+.opinion-carousel-content-paragraph{
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 700;
+}
+.opinion-carousel-content-person{
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+/* contact */
+.contact-content{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    height: 40vh;   
+}
+.contact-content-left{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: self-start;
+    margin: 5px 0;
+}
+.contact-content-left-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    margin: 5px 0;
+}
+.contact-content-left-item-icon{
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+.contact-content-right-header{
+    text-align: center;
+}
+.contact-content-right-socials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    justify-items: center;
+    grid-gap: 50px;
+    
+}
+.contact-content-right{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.contact-content-right-button{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    
+    background-color: chartreuse;
+    border: 0;
+}
+.contact-content-right-button-icon{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+
+/* Footer */
+.footer-container{
+    padding: 0 20px;
+    background-color: gray;
+ 
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) ;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+    
+}
+.footer-content-icon{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.footer-copy{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+}
