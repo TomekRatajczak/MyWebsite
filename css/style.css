@@ -2,6 +2,7 @@
 body{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 ul{
     margin: 0;
@@ -10,8 +11,9 @@ ul{
 li{
     list-style-type: none;
 }
-a{
+.link{
     text-decoration: none;
+    color: #fff;
 }
 .container{
     padding-bottom: 50px;
@@ -36,21 +38,93 @@ a{
 /* Navigation */
 .nav-bar-container{
     display: grid;
+    width: 100%;
     height: 100vh;
     grid-template-rows: 100px 1fr 100px 100px;
     justify-items: center;
     color: #fff;
+    position: relative;
 }
 .nav-menu{
-    z-index: 3;
+    z-index: 4;
+    width: 100%;
+}
+.nav-menu-button{
+    position:absolute;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 30px;
+    border-top: 3px solid #fff;
+    transition: .2s ease-in-out;
+}
+.nav-menu-button::before, .nav-menu-button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #fff;
+    transform: translateY(11px);
+}
+.nav-menu-button::after{
+    transform: translateY(25px);
+}
+.nav-menu-button-click{
+    clear: both;
+    transform: rotate(45deg) translateY(5px);
+    border: 0;
+}
+.nav-menu-button-click::after{
+    transform: rotate(-90deg) translateX(-10px);
+    
 }
 .nav-menu-list{
+    background-color: green;
+    opacity: 0.9;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+    align-content: space-evenly;
+    text-shadow: 1px 1px  #000;
+    transform: translateX(-100%);
+    transition: .4s ease-in-out;
+}
+.nav-option{
+    font-size: 1.8rem;
+}
+.nav-menu-list-click{
+    transform: translateX(0);
+}
+
+.nav-line{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-socials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    justify-items: center;
+    grid-gap: 50px;
+    
+}
+.nav-socials-button{
+    display: grid;
     justify-items: center;
     align-items: center;
-    font-size: 1.4rem;
-    text-shadow: 1px 1px  #000;
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    border-radius: 50%;
+}
+.nav-socials-button-icon{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
 }
 
 /* Hero */
