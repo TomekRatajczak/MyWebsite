@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: #000;
 }
 ul{
     margin: 0;
@@ -17,6 +18,11 @@ li{
 }
 .container{
     padding-bottom: 50px;
+    color: #fff;
+}
+.light{
+    background-color: #fff;
+    color: #000;
 }
 .header{
     padding: 50px 0;
@@ -44,6 +50,7 @@ li{
     justify-items: center;
     color: #fff;
     position: relative;
+    background-color: #fff;
 }
 .nav-menu{
     z-index: 4;
@@ -81,8 +88,8 @@ li{
     
 }
 .nav-menu-list{
-    background-color: green;
-    opacity: 0.9;
+    background-color: #444;
+    opacity: 0.95;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -116,15 +123,23 @@ li{
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    background-color: chartreuse;
-    border-radius: 50%;
+    
 }
 .nav-socials-button-icon{
-    width: 60px;
-    height: 60px;
-    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+.face-light{
+    background-image: url(../icons/facebook.svg);
+}
+.link-light{
+    background-image: url(../icons/linkedin.svg);
+}
+.git-light{
+    background-image: url(../icons/github.svg);
+}
+.yt-light{
+    background-image: url(../icons/youtube.svg);
 }
 
 /* Hero */
@@ -133,7 +148,7 @@ li{
     justify-items: center;
     height: 80vh;
     Width: 100%;
-    background-color: gray;
+    background-color: #000;
     z-index: 1;
     position: relative;
     top: -100px;
@@ -212,7 +227,7 @@ li{
 
 /* Skills */
 .skills-container{
-    background-color: gray;
+    position: relative;
 }
 .skills-content{
     display: grid;
@@ -289,7 +304,24 @@ li{
 
 /* Opinion */
 .opinion-container{
-    background-color: gray;
+    position: relative;
+}
+
+.opinion-container::before, 
+.footer-container::before,
+.skills-container::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
 }
 .opinion-carousel-container{
     display: grid;
@@ -372,7 +404,7 @@ li{
 /* Footer */
 .footer-container{
     padding: 0 20px;
-    background-color: gray;
+    position: relative;
  
 }
 .footer-content{
