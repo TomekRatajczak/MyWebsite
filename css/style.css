@@ -308,14 +308,14 @@ li{
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 .skills-content-single{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    margin: 5px 0;
+    margin: 25px 0;
 }
 .skills-content-single-icon{
     display: inline-block;
@@ -323,8 +323,19 @@ li{
     height: 50px;
     border: 0;
 }
-.skills-content-single-scale{
+.skills-content-single-bar{
+    border: 3px solid white;
+    padding: 5px 0 5px 5px;
+}
+.skills-content-single-bar-ele{
     display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-color: #fff;
+    margin-right: 5px;
+}
+.skills-content-single-bar-elealt{
+    background-color: red;
 }
 
 /* Portfolio */
@@ -333,8 +344,7 @@ li{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
-    align-items: self-start
-    ;
+    align-items: self-start;
     grid-gap: 50px;
     width: 90%;
     height: 100vh;
