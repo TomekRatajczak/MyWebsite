@@ -437,9 +437,70 @@ li{
     width: 100%;
     height: 40vh;
 }
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .4s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation: fade 4s ease-in-out;
+    animation-name: fade;
+    animation: fade 4s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+    0% {
+    transform: translateX(10%);
+    opacity: 0;
+    }
+    20% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+    80% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+
+    100% {
+    transform: translateX(-10%);
+    opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+    transform: translateX(10%);
+    opacity: 0;
+    }
+    20% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+    80% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+   
+    100% {
+    transform: translateX(-10%);
+    opacity: 0;
+    }
+}
 .opinion-carousel-single{
+    overflow: hidden;
     width: 80%;
-    
+    transform: translateX(0);
 }
 .opinion-carousel-content-paragraph{
     text-align: center;

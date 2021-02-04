@@ -1,11 +1,18 @@
-gsap.registerPlugin(ScrollTrigger);
+// HamburgerMenu
 const hamburger = document.querySelector('.nav-menu-button');
 const nav = document.querySelector('.nav-menu-list');
-const progressBar = document.querySelectorAll('.skills-content-single-scale');
 
+const handleClick = () => {
+  hamburger.classList.toggle('nav-menu-button-click');
+  nav.classList.toggle('nav-menu-list-click');
+}
+
+hamburger.addEventListener('click', handleClick);
+
+//ProgerssBarMenu
+const progressBar = document.querySelectorAll('.skills-content-single-scale');
 const progressEle = document.createElement("div");
 progressEle.classList.add("skills-content-single-bar");
-
 
 for(let i=0; i<10; i++){
   const singleStep = document.createElement("div");
@@ -37,16 +44,8 @@ changeColor(5, four);
 changeColor(2, five);
 changeColor(6, six);
 
-
-
-
-const handleClick = () => {
-  hamburger.classList.toggle('nav-menu-button-click');
-  nav.classList.toggle('nav-menu-list-click');
-}
-
-hamburger.addEventListener('click', handleClick);
-
+// ScrollTriger
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".panel:not(:last-child)", {
   yPercent: -100, 
@@ -61,5 +60,28 @@ gsap.to(".panel:not(:last-child)", {
   }
 });
 
-
 gsap.set(".panel", {zIndex: (i, target, targets) => targets.length - i});
+
+
+//OpinionSlider
+const slides = document.querySelectorAll(".opinion-carousel-single");
+const dots = document.querySelectorAll(".dot");
+let slideIndex = 0;
+
+const showSlides = () => {
+  let i;
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); 
+}
+
+document.addEventListener('load', showSlides());
