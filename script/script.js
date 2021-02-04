@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 const hamburger = document.querySelector('.nav-menu-button');
 const nav = document.querySelector('.nav-menu-list');
 const progressBar = document.querySelectorAll('.skills-content-single-scale');
@@ -47,3 +48,18 @@ const handleClick = () => {
 hamburger.addEventListener('click', handleClick);
 
 
+gsap.to(".panel:not(:last-child)", {
+  yPercent: -100, 
+  ease: "none",
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: "#slides",
+    start: "top top",
+    end: "+=300%",
+    scrub: true,
+    pin: true
+  }
+});
+
+
+gsap.set(".panel", {zIndex: (i, target, targets) => targets.length - i});

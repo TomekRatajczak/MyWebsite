@@ -339,16 +339,33 @@ li{
 }
 
 /* Portfolio */
+.portfolio-container{
+    position: relative;
+    
+}
+#slides{
+    height: 100vh; 
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    
+}
 .portfolio-single-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
-    align-items: self-start;
+    align-items: center;
     grid-gap: 50px;
     width: 90%;
     height: 100vh;
     margin: 0 auto;
+}
+.panel {
+    position: absolute;
+    will-change: transform;
+    background-color: #fff;  
+    display: grid;
 }
 .portfolio-single-image{
     width: 100%;
@@ -356,6 +373,11 @@ li{
     margin: 20px 0;
     object-fit: cover;
     object-position: center;
+}
+.portfolio-single-content{
+    display: grid;
+    align-items: start;
+    height: 60vh;
 }
 .portfolio-single-content-paragraph{
     text-align: justify;
@@ -388,6 +410,7 @@ li{
 
 /* Opinion */
 .opinion-container{
+    
     position: relative;
 }
 
